@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en" class="dark">
+
 
 <head>
 <meta charset="UTF-8">
@@ -7,102 +9,238 @@
 <title>Sunny Blooms | Flower Shop</title>
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-</style>
 
-<body class="bg-white text-center">
+    <style type="text/tailwindcss">
+        @custom-variant dark (&:where(.dark, .dark *));
 
-    <!-- HEADER -->
-    <header>
-        <nav>
-            <h2>🌸 Sunny Blooms</h2>
 
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#flowers">Flowers</a></li>
+        :root {
+            --cream: #FFF9F2;
+            --sage: #E7F0E5;
+            --terracotta: #C65D3B;
+            --forest: #24352B;
+        }
+
+
+        @layer components {
+            .btn-primary {
+                @apply rounded-full px-6 py-3 font-semibold text-white transition-colors;
+                background-color: var(--terracotta);
+            }
+
+
+            .btn-primary:hover {
+                @apply opacity-80;
+            }
+
+
+            .flower-card {
+                @apply rounded-2xl p-6 shadow-md transition-shadow;
+                background-color: var(--sage);
+            }
+        }
+    </style>
+</head>
+
+
+
+
+<body class="bg-[#FFF9F2] text-[#24352B] dark:bg-[#18251D] dark:text-white"></body>
+
+
+    <header class="bg-[#E7F0E5] dark:bg-[#263B2E]">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 max-[600px]:flex-col max-[600px]:gap-4">
+
+
+            <a href="#hero" class="text-2xl font-bold text-[#C65D3B]">
+                🌸 Sunny Blooms
+            </a>
+
+
+            <ul class="flex flex-wrap items-center gap-6 max-[600px]:justify-center">
+                <li><a class="hover:text-[#C65D3B] dark:hover:text-[#F5A88C]" href="#hero">Home</a></li>
+                <li><a class="hover:text-[#C65D3B] dark:hover:text-[#F5A88C]" href="#about">About</a></li>  
+                <li><a class="hover:text-[#C65D3B] dark:hover:text-[#F5A88C]" href="#contact">Contact</a></li>
+                <li><a class="hover:text-[#C65D3B] dark:hover:text-[#F5A88C]" href="#flowers">Flowers</a></li>
             </ul>
+
+
+            <button id="darkModeToggle" type="button"
+                class="btn-primary dark:bg-[#52765A]">
+                Dark Mode
+            </button>
+
+
         </nav>
     </header>
 
-    <!-- MAIN -->
-    <main>
 
-        <!-- HERO SECTION -->
-        <section id="hero">
-            <h1>Sunny Blooms</h1>
+  <!-- MAIN -->
+    <main class="mx-auto flex max-w-7xl flex-col gap-24 px-6 py-16 md:px-12">
 
-            <p>
+
+        <!-- HERO -->
+        <section id="hero"
+            class="flex min-h-[65vh] flex-col items-center justify-center gap-6 rounded-3xl bg-[#E7F0E5] px-6 py-16 dark:bg-[#263B2E]">
+
+
+            <span class="text-5xl">🌻</span>
+
+
+            <h1 class="text-5xl font-bold text-[#C65D3B] md:text-7xl">
+                Sunny Blooms
+            </h1>
+
+
+            <p class="max-w-xl text-lg md:text-xl">
                 Bringing Sunshine Through Every Bloom.
+                Beautiful flowers for every special moment.
             </p>
 
-            <a href="#flowers">Explore Our Flowers</a>
+
+            <a href="#flowers" class="btn-primary">
+                Explore Our Flowers
+            </a>
+
+
+            <button id="replayBtn" type="button"
+                class="rounded-full border border-[#C65D3B] px-6 py-3 text-[#C65D3B] dark:text-white">
+                Refresh
+            </button>
+
+
         </section>
 
-        <!-- ABOUT SECTION -->
-        <section id="about">
-            <h2>About Sunny Blooms</h2>
 
-            <p>
+        <!-- ABOUT -->
+        <section id="about"
+            class="reveal rounded-3xl bg-[#E7F0E5] p-8 dark:bg-[#263B2E] md:p-12">
+
+
+            <h2 class="mb-5 text-3xl font-bold text-[#C65D3B] md:text-5xl">
+                About Sunny Blooms
+            </h2>
+
+
+            <p class="mx-auto max-w-3xl text-lg leading-relaxed">
                 Sunny Blooms is a flower shop dedicated to
                 bringing happiness and beautiful memories
-                through fresh and colorful flowers.
+                through fresh and colorful flowers. We believe
+                every flower tells a story and every bouquet
+                brings a smile.
             </p>
+
+
         </section>
 
-        <!-- FLOWERS SECTION -->
-        <section id="flowers">
-            <h2>Our Beautiful Flowers</h2>
 
-            <div>
+       <!-- FLOWERS -->
+        <section id="flowers" class="reveal">
 
-                <article>
-                    <h3>Sunflower Bouquet</h3>
-                    <p>Bright sunflowers that bring happiness.</p>
+
+            <h2 class="mb-10 text-3xl font-bold text-[#C65D3B] md:text-5xl">
+                Our Beautiful Flowers
+            </h2>
+
+
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+
+                <article class="flower-card dark:bg-[#263B2E]">
+                    <div class="mb-4 text-6xl">🌻</div>
+                    <h3 class="mb-3 text-2xl font-bold">Sunflower Bouquet</h3>
+                    <p>Bright sunflowers that bring sunshine and happiness.</p>
                 </article>
 
-                <article>
-                    <h3>Rose Bouquet</h3>
-                    <p>Beautiful roses perfect for special moments.</p>
+
+                <article class="flower-card dark:bg-[#263B2E]">
+                    <div class="mb-4 text-6xl">🌹</div>
+                    <h3 class="mb-3 text-2xl font-bold">Rose Bouquet</h3>
+                    <p>Beautiful roses perfect for love and special moments.</p>
                 </article>
 
-                <article>
-                    <h3>Tulip Bouquet</h3>
-                    <p>Elegant tulips for every occasion.</p>
+
+                <article class="flower-card dark:bg-[#263B2E]">
+                    <div class="mb-4 text-6xl">🌷</div>
+                    <h3 class="mb-3 text-2xl font-bold">Tulip Bouquet</h3>
+                    <p>Elegant tulips that make every occasion memorable.</p>
                 </article>
+
 
             </div>
+
+
         </section>
 
-        <!-- CONTACT SECTION -->
-        <section id="contact">
-            <h2>Contact Us</h2>
 
-            <form action="#">
+        <!-- CONTACT -->
+        <section id="contact"
+            class="reveal rounded-3xl bg-[#E7F0E5] p-8 dark:bg-[#263B2E] md:p-12">
+
+
+            <h2 class="mb-4 text-3xl font-bold text-[#C65D3B] md:text-5xl">
+                Let's Grow Something Beautiful!
+            </h2>
+
+
+            <p class="mb-8">
+                Have questions or want to order flowers? Contact us!
+            </p>
+
+
+            <form action="#" class="mx-auto flex max-w-xl flex-col gap-4 text-left">
+
 
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required
+                    class="rounded-xl border border-[#B6C9B5] bg-white p-3 text-[#24352B] dark:border-[#52765A] dark:bg-[#18251D] dark:text-white">
+
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required
+                    class="rounded-xl border border-[#B6C9B5] bg-white p-3 text-[#24352B] dark:border-[#52765A] dark:bg-[#18251D] dark:text-white">
+
 
                 <label for="message">Message</label>
-                <textarea id="message" name="message"
-                    rows="5" required></textarea>
+                <textarea id="message" name="message" rows="5" required
+                    class="rounded-xl border border-[#B6C9B5] bg-white p-3 text-[#24352B] dark:border-[#52765A] dark:bg-[#18251D] dark:text-white"></textarea>
 
-                <button type="submit">Send Message</button>
+
+                <button type="submit" class="btn-primary dark:bg-[#52765A]">
+                    Send Message
+                </button>
+
 
             </form>
+
+
         </section>
+
 
     </main>
 
+
     <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Sunny Blooms. All Rights Reserved.</p>
+    <footer class="bg-[#E7F0E5] p-8 dark:bg-[#263B2E] items-center text-center ">
+        <p>© 2026 Sunny Blooms. All Rights Reserved. 🌸</p>
     </footer>
+
+
+    <!-- DARK MODE SCRIPT -->
+    <script>
+        const darkModeToggle = document.querySelector("#darkModeToggle");
+        const html = document.querySelector("html");
+
+
+        darkModeToggle.addEventListener("click", function () {
+            html.classList.toggle("dark");
+        });
+    </script>
+
 
 </body>
 </html>
+
+
 
 
