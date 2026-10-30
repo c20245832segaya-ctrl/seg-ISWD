@@ -1,6 +1,9 @@
 
+
 <!DOCTYPE html>
 <html lang="en" class="dark">
+
+
 
 
 <head>
@@ -10,8 +13,12 @@
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 
+
+
     <style type="text/tailwindcss">
         @custom-variant dark (&:where(.dark, .dark *));
+
+
 
 
         :root {
@@ -22,6 +29,8 @@
         }
 
 
+
+
         @layer components {
             .btn-primary {
                 @apply rounded-full px-6 py-3 font-semibold text-white transition-colors;
@@ -29,9 +38,13 @@
             }
 
 
+
+
             .btn-primary:hover {
                 @apply opacity-80;
             }
+
+
 
 
             .flower-card {
@@ -45,11 +58,22 @@
 
 
 
+
+
+
+
 <body class="bg-[#FFF9F2] text-[#24352B] dark:bg-[#18251D] dark:text-white"></body>
+
+
+<div id="progressBar"
+    class="fixed left-0 top-0 z-50 h-1 w-full origin-left scale-x-0 bg-[#C65D3B]">
+</div>
 
 
     <header class="bg-[#E7F0E5] dark:bg-[#263B2E]">
         <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 max-[600px]:flex-col max-[600px]:gap-4">
+
+
 
 
             <a href="#hero" class="text-2xl font-bold text-[#C65D3B]">
@@ -57,23 +81,52 @@
             </a>
 
 
-            <ul class="flex flex-wrap items-center gap-6 max-[600px]:justify-center">
-                <li><a class="hover:text-[#C65D3B] dark:hover:text-[#F5A88C]" href="#hero">Home</a></li>
-                <li><a class="hover:text-[#C65D3B] dark:hover:text-[#F5A88C]" href="#about">About</a></li>  
-                <li><a class="hover:text-[#C65D3B] dark:hover:text-[#F5A88C]" href="#contact">Contact</a></li>
-                <li><a class="hover:text-[#C65D3B] dark:hover:text-[#F5A88C]" href="#flowers">Flowers</a></li>
-            </ul>
 
+
+         <ul class="flex flex-wrap items-center gap-6 max-[600px]:justify-center">
+
+
+    <li>
+        <a class="text-[#24352B] hover:text-[#C65D3B] dark:text-[#F4EBDD] dark:hover:text-[#F5A88C]"
+            href="#hero">
+            Home
+        </a>
+    </li>
+
+
+    <li>
+        <a class="text-[#24352B] hover:text-[#C65D3B] dark:text-[#F4EBDD] dark:hover:text-[#F5A88C]"
+            href="#about">
+            About
+        </a>
+    </li>
+
+
+    <li>
+        <a class="text-[#24352B] hover:text-[#C65D3B] dark:text-[#F4EBDD] dark:hover:text-[#F5A88C]"
+            href="#flowers">
+            Flowers
+        </a>
+    </li>
+
+
+    <li>
+        <a class="text-[#24352B] hover:text-[#C65D3B] dark:text-[#F4EBDD] dark:hover:text-[#F5A88C]"
+            href="#contact">
+            Contact
+        </a>
+    </li>
+
+
+</ul>
 
             <button id="darkModeToggle" type="button"
                 class="btn-primary dark:bg-[#52765A]">
                 Dark Mode
             </button>
 
-
         </nav>
     </header>
-
 
   <!-- MAIN -->
     <main class="mx-auto flex max-w-7xl flex-col gap-24 px-6 py-16 md:px-12">
@@ -98,7 +151,7 @@
             </p>
 
 
-            <a href="#flowers" class="btn-primary">
+            <a href="#flowers" class="btn-primary dark:bg-[#52765A]">
                 Explore Our Flowers
             </a>
 
@@ -116,11 +169,9 @@
         <section id="about"
             class="reveal rounded-3xl bg-[#E7F0E5] p-8 dark:bg-[#263B2E] md:p-12">
 
-
             <h2 class="mb-5 text-3xl font-bold text-[#C65D3B] md:text-5xl text-center">
                 About Sunny Blooms
             </h2>
-
 
             <p class="mx-auto max-w-3xl text-lg leading-relaxed">
                 Sunny Blooms is a flower shop dedicated to
@@ -130,12 +181,13 @@
                 brings a smile.
             </p>
 
-
         </section>
 
 
        <!-- FLOWERS -->
         <section id="flowers" class="reveal">
+
+
 
 
             <h2 class="mb-10 text-3xl font-bold text-[#C65D3B] md:text-5xl">
@@ -152,13 +204,11 @@
                     <p>Bright sunflowers that bring sunshine and happiness.</p>
                 </article>
 
-
                 <article class="flower-card dark:bg-[#263B2E]">
                     <div class="mb-4 text-6xl">🌹</div>
                     <h3 class="mb-3 text-2xl font-bold">Rose Bouquet</h3>
                     <p>Beautiful roses perfect for love and special moments.</p>
                 </article>
-
 
                 <article class="flower-card dark:bg-[#263B2E]">
                     <div class="mb-4 text-6xl">🌷</div>
@@ -166,30 +216,22 @@
                     <p>Elegant tulips that make every occasion memorable.</p>
                 </article>
 
-
             </div>
-
-
         </section>
-
 
         <!-- CONTACT -->
         <section id="contact"
             class="reveal rounded-3xl bg-[#E7F0E5] p-8 dark:bg-[#263B2E] md:p-12">
 
-
             <h2 class="mb-4 text-3xl font-bold text-[#C65D3B] md:text-5xl">
                 Let's Grow Something Beautiful!
             </h2>
-
 
             <p class="mb-8">
                 Have questions or want to order flowers? Contact us!
             </p>
 
-
             <form action="#" class="mx-auto flex max-w-xl flex-col gap-4 text-left">
-
 
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required
@@ -209,45 +251,24 @@
                 <button type="submit" class="btn-primary dark:bg-[#52765A]">
                     Send Message
                 </button>
-
-
             </form>
-
-
         </section>
 
 
     </main>
-
 
     <!-- FOOTER -->
     <footer class="bg-[#E7F0E5] p-8 dark:bg-[#263B2E] items-center text-center ">
         <p>© 2026 Sunny Blooms. All Rights Reserved. 🌸</p>
     </footer>
 
-
-    <!-- DARK MODE SCRIPT -->
-    <script>
-        const darkModeToggle = document.querySelector("#darkModeToggle");
-        const html = document.querySelector("html");
+ </script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
 
-        darkModeToggle.addEventListener("click", function () {
-            html.classList.toggle("dark");
-        });
-    </script>
-<!-- GSAP -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-
-<!-- ScrollTrigger -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 
-<!-- Your JavaScript -->
-<script src="script.js"></script>
 
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
-
